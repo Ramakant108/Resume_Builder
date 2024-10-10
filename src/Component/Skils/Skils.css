@@ -1,0 +1,101 @@
+.skills-form {
+  padding: 20px;
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.skills-form h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.skill-entry {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.skill-entry input {
+  width: 70%;
+  padding: 10px;
+  margin-right: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.skill-entry input:focus {
+  border-color: #007bff;
+}
+
+.add-remove-new-skill {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.add-remove-new-skill button {
+  background-color: #fff;
+  color: #007bff;
+  padding: 10px 20px;
+  border: 1px solid #007bff;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.add-remove-new-skill button:hover {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.back-button, .next-button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.back-button:hover, .next-button:hover {
+  background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+  .skills-form {
+      padding: 15px;
+  }
+
+  .skill-entry {
+      flex-direction: column;
+  }
+
+  .skill-entry input {
+      width: 100%;
+      margin-bottom: 10px;
+  }
+
+  .action-buttons {
+      flex-direction: column;
+  }
+
+  .back-button, .next-button {
+      width: 100%;
+      margin-bottom: 10px;
+  }
+}

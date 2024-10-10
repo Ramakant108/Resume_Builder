@@ -1,0 +1,92 @@
+/* Basic Styles for the card grid */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Four columns for larger screens */
+    gap: 20px; /* Spacing between cards */
+    padding-top: 100px;
+    justify-items: center;
+}
+
+/* Card styling */
+.card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    text-align: center;
+    position: relative;
+    transition: transform 0.3s ease;
+    width: 250px; /* Fixed width */
+    height: 300px; /* Fixed height */
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+/* Card image */
+.card-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+/* The button that will appear on hover */
+.card-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px 15px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    transition: opacity 0.3s ease;
+}
+
+/* Media Queries */
+
+/* Tablets (max-width: 768px) */
+@media (max-width: 768px) {
+    .card-grid {
+        grid-template-columns: repeat(2, 1fr); /* Reduce to two columns */
+        gap: 15px;
+    }
+
+    .card {
+        width: 200px; /* Slightly smaller card */
+        height: 260px;
+    }
+
+    .card-image {
+        height: 200px; /* Adjust image size */
+    }
+
+    .card-button {
+        padding: 8px 12px; /* Smaller button */
+    }
+}
+
+/* Mobile devices (max-width: 480px) */
+@media (max-width: 480px) {
+    .card-grid {
+        grid-template-columns: 1fr; /* One column for small screens */
+        gap: 10px;
+    }
+
+    .card-image {
+        width: 100%;
+        height: 250px;
+        object-fit: contain; /* Ensures the entire image is visible */
+    }
+
+    .card-image {
+        height: 180px; /* Smaller image height */
+    }
+
+    .card-button {
+        padding: 6px 10px; /* Smaller button for mobile */
+        font-size: 0.9rem; /* Slightly smaller font size */
+    }
+}
